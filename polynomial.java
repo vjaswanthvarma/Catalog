@@ -29,7 +29,7 @@ public class Main
                      value= value.trim().replace("\"", "");
                      int base = Integer.parseInt(basePart);
             BigInteger Y = new BigInteger(valuePart, base);
-                     int roots[index++] = new int[]{x,y };
+                      roots[index++] = new int[]{x,y };
                      if (index >= k) break;
                 }
             }
