@@ -28,10 +28,8 @@ public class Main
                       base = base.trim().replace("\"", "");
                      value= value.trim().replace("\"", "");
                      int base = Integer.parseInt(basePart);
-
-            // Convert the value to a BigInteger in the specified base
             BigInteger Y = new BigInteger(valuePart, base);
-                     roots[index++] = new int[]{x,y };
+                     int roots[index++] = new int[]{x,y };
                      if (index >= k) break;
                 }
             }
