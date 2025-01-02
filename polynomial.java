@@ -28,7 +28,7 @@ public class Main
                      String value = entry.substring(entry.indexOf("\"value\":") + 8);
                       base = base.trim().replace("\"", "");
                      value= value.trim().replace("\"", "");
-            BigInteger Y = new BigInteger(valuePart, base);
+            BigInteger Y = new BigInteger(value, base);
                       roots[index++] = new int[]{x,Y};
                      if (index >= k) break;
                 }
@@ -38,7 +38,6 @@ public class Main
 	    catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
         }
-        if (index >= k) break;
          int constantTerm = calculateConstantTerm(roots);
         System.out.println("c = " + constantTerm);
         
