@@ -8,6 +8,7 @@ Code, Compile, Run and Debug online from anywhere in world.
 *******************************************************************************/
 import java.nio.file.*;
 import java.io.IOException;
+import java.math.BigInteger;
 public class Main
 {
 	public static void main(String[] args) {
@@ -27,9 +28,8 @@ public class Main
                      String value = entry.substring(entry.indexOf("\"value\":") + 8);
                       base = base.trim().replace("\"", "");
                      value= value.trim().replace("\"", "");
-                     int base = Integer.parseInt(basePart);
             BigInteger Y = new BigInteger(valuePart, base);
-                      roots[index++] = new int[]{x,y };
+                      roots[index++] = new int[]{x,Y};
                      if (index >= k) break;
                 }
             }
